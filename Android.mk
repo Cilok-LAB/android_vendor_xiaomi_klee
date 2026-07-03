@@ -22,7 +22,7 @@ $(call add-radio-file-sha1-checked,radio/mcupm.img,e4a6fcc4ba6b87241449012398612
 $(call add-radio-file-sha1-checked,radio/modem.img,e7f4effff3c3cb127e94dfd75d437ace4c4583b3)
 $(call add-radio-file-sha1-checked,radio/mvpu_algo.img,90c9feccd8d9ac2a22654de396ff76f2dd92d4a0)
 $(call add-radio-file-sha1-checked,radio/pi_img.img,ad48f66211d93c253abe837021f212aaa09712a7)
-$(call add-radio-file-sha1-checked,radio/preloader_raw.img,846e7e8fc26bc994d00b1c2211a22df4e6ce87b2)
+$(call add-radio-file-sha1-checked,radio/preloader_raw.img,58b36a1e257e4e4362b39b825ab673f1c9dd77fd)
 $(call add-radio-file-sha1-checked,radio/scp.img,ce9c81ae65a500a68b1e3ee87810c248d5cbbe0a)
 $(call add-radio-file-sha1-checked,radio/spmfw.img,36dfd83051d752d14f6d6cf242f54e35d2b75597)
 $(call add-radio-file-sha1-checked,radio/sspm.img,68b0496b5c81b1f0dcf0deaf4b74bfd018e46cb4)

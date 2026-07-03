@@ -928,7 +928,6 @@ PRODUCT_PACKAGES += \
     libGLES_mali \
     android.hardware.audio.effect.aidl-impl-mediatek \
     android.hardware.gnss-impl-mediatek \
-    android.hardware.sensors@2.X-subhal-mediatek \
     android.hardware.soundtrigger3-impl \
     audio.primary.mediatek \
     consumerir.common \
