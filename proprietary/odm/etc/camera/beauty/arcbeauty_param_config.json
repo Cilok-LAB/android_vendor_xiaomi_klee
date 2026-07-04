@@ -141,8 +141,8 @@
 			},
 			"front_cap_parameters": {
 				"ABS_KEY_BASIC_EYE_BRIGHTEN": {
-					"default_value": 0,
-					"male_value": 0
+					"default_value": 10,
+					"male_value": 5
 				},
 				"ABS_KEY_BASIC_SKIN_SOFTEN": {
 					"slider_mid":40,
@@ -291,8 +291,8 @@
 						"formula_ratio":1
 					},
 					"ABS_KEY_BASIC_EYE_BRIGHTEN": {
-						"default_value":0,
-						"male_value":0
+						"default_value":40,
+						"male_value":30
 					},
 					"ABS_KEY_FACIAL_GLOSS": {
 						"formula_ratio":1,
@@ -367,8 +367,8 @@
 			"SecondaryScreen_default_parameters": {
 				"SecondaryScreen_default_cap_parameters": {
 					"ABS_KEY_BASIC_EYE_BRIGHTEN": {
-						"default_value":0,
-						"male_value":0
+						"default_value":40,
+						"male_value":30
 					},
 					"ABS_KEY_BASIC_SKIN_SOFTEN": {
 						"slider_mid":40,
@@ -441,8 +441,8 @@
 			"SecondaryScreen_portrait_parameters": {
 				"SecondaryScreen_portrait_cap_parameters": {
 					"ABS_KEY_BASIC_EYE_BRIGHTEN": {
-						"default_value":0,
-						"male_value":0
+						"default_value":40,
+						"male_value":30
 					},
 					"ABS_KEY_BASIC_SKIN_SOFTEN": {
 						"slider_mid":40,

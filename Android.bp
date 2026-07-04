@@ -2762,9 +2762,9 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "libdl",
+                "libm",
                 "liblog",
                 "libSQLiteModule_VER_ALL",
-                "libm",
                 "libc",
             ],
         },
@@ -2787,10 +2787,10 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "libdl",
+                "libm",
                 "liblog",
                 "libaaa_afassist_V2",
                 "libSQLiteModule_VER_ALL",
-                "libm",
                 "libc",
             ],
         },
