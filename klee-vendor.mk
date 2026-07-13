@@ -737,7 +737,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/klee/proprietary/vendor/etc/nnapi_powerhal.json:$(TARGET_COPY_OUT_VENDOR)/etc/nnapi_powerhal.json \
     vendor/xiaomi/klee/proprietary/vendor/etc/p10_36_02_0a_dsc_vdo_dbi.bin:$(TARGET_COPY_OUT_VENDOR)/etc/p10_36_02_0a_dsc_vdo_dbi.bin \
     vendor/xiaomi/klee/proprietary/vendor/etc/p10_42_02_0b_dsc_vdo_dbi.bin:$(TARGET_COPY_OUT_VENDOR)/etc/p10_42_02_0b_dsc_vdo_dbi.bin \
-    vendor/xiaomi/klee/proprietary/vendor/etc/permissions/android.hardware.hardware_keystore.mitee.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.hardware_keystore.mitee.xml \
     vendor/xiaomi/klee/proprietary/vendor/etc/permissions/android.hardware.identity_credential.mitee.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.identity_credential.mitee.xml \
     vendor/xiaomi/klee/proprietary/vendor/etc/permissions/camera_extensions.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/camera_extensions.xml \
     vendor/xiaomi/klee/proprietary/vendor/etc/pq_flag.xml:$(TARGET_COPY_OUT_VENDOR)/etc/pq_flag.xml \
@@ -1117,7 +1116,7 @@ PRODUCT_PACKAGES += \
     APUWareUtilsAidlServer \
     android.hardware.audio.core-impl-mediatek \
     android.hardware.bluetooth.audio-impl-mediatek \
-    android.hardware.security.keymint-V3-ndk-v34 \
+    android.hardware.security.keymint-V3-ndk-v36 \
     com.xiaomi.camdfx \
     com.xiaomi.camhal.extmodel.ec_executor \
     com.xiaomi.camhal.extmodel.intent_aware_sys \
