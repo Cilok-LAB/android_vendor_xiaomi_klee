@@ -567,6 +567,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/klee/proprietary/vendor/etc/dolby/dax-default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-default.xml \
     vendor/xiaomi/klee/proprietary/vendor/etc/dolby/dax-fs19xx-spatializer.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-fs19xx-spatializer.xml \
     vendor/xiaomi/klee/proprietary/vendor/etc/dolby/dax-fs19xx.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-fs19xx.xml \
+    vendor/xiaomi/klee/proprietary/vendor/etc/dolby_vision.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/dolby_vision.cfg \
     vendor/xiaomi/klee/proprietary/vendor/etc/ecc_list.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ecc_list.xml \
     vendor/xiaomi/klee/proprietary/vendor/etc/ecc_list_preference.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ecc_list_preference.xml \
     vendor/xiaomi/klee/proprietary/vendor/etc/elliptic_sensor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/elliptic_sensor.xml \
@@ -607,6 +608,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/klee/proprietary/vendor/etc/init/android.hardware.gnss-service.mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gnss-service.mediatek.rc \
     vendor/xiaomi/klee/proprietary/vendor/etc/init/android.hardware.graphics.composer@3.3-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.graphics.composer@3.3-service.rc \
     vendor/xiaomi/klee/proprietary/vendor/etc/init/android.hardware.identity@5.0-service.mitee.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.identity@5.0-service.mitee.rc \
+    vendor/xiaomi/klee/proprietary/vendor/etc/init/android.hardware.media.c2-mediatek-64b.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.media.c2-mediatek-64b.rc \
     vendor/xiaomi/klee/proprietary/vendor/etc/init/android.hardware.neuralnetworks-shim-service-mtk.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.neuralnetworks-shim-service-mtk.rc \
     vendor/xiaomi/klee/proprietary/vendor/etc/init/android.hardware.secure_element@1.2-service-mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.secure_element@1.2-service-mediatek.rc \
     vendor/xiaomi/klee/proprietary/vendor/etc/init/android.hardware.security.keymint.mitee@3.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.security.keymint.mitee@3.0-service.rc \
@@ -634,6 +636,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/klee/proprietary/vendor/etc/init/tee-supplicant.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/tee-supplicant.rc \
     vendor/xiaomi/klee/proprietary/vendor/etc/init/touch_boost.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/touch_boost.rc \
     vendor/xiaomi/klee/proprietary/vendor/etc/init/vendor.dolby.media.c2-default-service-dax.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.dolby.media.c2-default-service-dax.rc \
+    vendor/xiaomi/klee/proprietary/vendor/etc/init/vendor.dolby.media.c2-service-vision.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.dolby.media.c2-service-vision.rc \
     vendor/xiaomi/klee/proprietary/vendor/etc/init/vendor.mediatek.hardware.mmagent-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.mediatek.hardware.mmagent-service.rc \
     vendor/xiaomi/klee/proprietary/vendor/etc/init/vendor.mediatek.hardware.mmlpq@V1-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.mediatek.hardware.mmlpq@V1-service.rc \
     vendor/xiaomi/klee/proprietary/vendor/etc/init/vendor.mediatek.hardware.mms-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.mediatek.hardware.mms-service.rc \
@@ -741,6 +744,8 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/klee/proprietary/vendor/etc/permissions/camera_extensions.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/camera_extensions.xml \
     vendor/xiaomi/klee/proprietary/vendor/etc/pq_flag.xml:$(TARGET_COPY_OUT_VENDOR)/etc/pq_flag.xml \
     vendor/xiaomi/klee/proprietary/vendor/etc/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt \
+    vendor/xiaomi/klee/proprietary/vendor/etc/seccomp_policy/android.hardware.media.c2@1.2-extended-seccomp-policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/android.hardware.media.c2@1.2-extended-seccomp-policy \
+    vendor/xiaomi/klee/proprietary/vendor/etc/seccomp_policy/android.hardware.media.c2@1.2-mediatek-seccomp-policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/android.hardware.media.c2@1.2-mediatek-seccomp-policy \
     vendor/xiaomi/klee/proprietary/vendor/etc/sensor_diag.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/sensor_diag.cfg \
     vendor/xiaomi/klee/proprietary/vendor/etc/slp_conf:$(TARGET_COPY_OUT_VENDOR)/etc/slp_conf \
     vendor/xiaomi/klee/proprietary/vendor/etc/smartpa_param/AW_DSP.bin:$(TARGET_COPY_OUT_VENDOR)/etc/smartpa_param/AW_DSP.bin \
@@ -1117,6 +1122,10 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.core-impl-mediatek \
     android.hardware.bluetooth.audio-impl-mediatek \
     android.hardware.security.keymint-V3-ndk-v36 \
+    c2.dolby.client \
+    c2.dolby.hevc.dec \
+    c2.dolby.hevc.sec.dec \
+    c2.dolby.store \
     com.xiaomi.camdfx \
     com.xiaomi.camhal.extmodel.ec_executor \
     com.xiaomi.camhal.extmodel.intent_aware_sys \
@@ -1265,13 +1274,17 @@ PRODUCT_PACKAGES += \
     libccci_util \
     libcmdl \
     libcmdl_ndk.mtk.vndk \
+    libcodec2_aidl_prebuilt \
     libcodec2_fsr \
+    libcodec2_hal_common_prebuilt \
+    libcodec2_hidl_plugin_prebuilt \
     libcodec2_mtk_c2store \
     libcodec2_mtk_vdec \
     libcodec2_mtk_venc \
     libcodec2_soft_ac4dec \
     libcodec2_soft_ddpdec \
     libcodec2_store_dolby \
+    libcodec2_vndk_prebuilt \
     libcodec2_vpp_AIMEMC_plugin \
     libcodec2_vpp_AISR_plugin \
     libcodec2_vpp_fa_plugin \
@@ -1314,6 +1327,9 @@ PRODUCT_PACKAGES += \
     libdlbdsservice \
     libdlbpreg \
     libdmshal \
+    libdolbydecoderprocessor \
+    libdolbyeglcore \
+    libdolbyottcameracontrol \
     libecoengine \
     libfeature.aiseg.assist.linux \
     libfeature.hdr10 \
@@ -2307,6 +2323,7 @@ PRODUCT_PACKAGES += \
     manifest_cameraprovider.xml \
     manifest_hwcomposer.xml \
     manifest_isphal.xml \
+    manifest_media_c2_default.xml \
     manifest_mmlpq.xml \
     manifest_mtkgpuserv.xml \
     manifest_uievent.xml \
@@ -2339,6 +2356,8 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss-service.mediatek \
     android.hardware.graphics.composer@3.3-service \
     android.hardware.identity-service.mitee@5.0 \
+    android.hardware.media.c2-mediatek-64b \
+    android.hardware.media.c2@1.2-mediatek-64b \
     android.hardware.neuralnetworks-shim-service-mtk \
     android.hardware.secure_element@1.2-service-mediatek \
     android.hardware.security.keymint@3.0-service.mitee \
@@ -2348,6 +2367,7 @@ PRODUCT_PACKAGES += \
     tetheroffloadservice \
     vendor.dolby.dms.service \
     vendor.dolby.media.c2-default-service-dax \
+    vendor.dolby.media.c2-service-vision \
     vendor.mediatek.hardware.gpuserv-service \
     vendor.mediatek.hardware.mmagent-service \
     vendor.mediatek.hardware.mmlpq@V1-service \
