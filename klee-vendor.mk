@@ -1119,6 +1119,7 @@ PRODUCT_PACKAGES += \
     av-audio-types-aidl-V3-ndk \
     APUWareApusysAidlServer \
     APUWareUtilsAidlServer \
+    android.frameworks.displayservice@1.0 \
     android.hardware.audio.core-impl-mediatek \
     android.hardware.bluetooth.audio-impl-mediatek \
     android.hardware.security.keymint-V3-ndk-v36 \
@@ -1201,6 +1202,7 @@ PRODUCT_PACKAGES += \
     libSQLiteModule_VER_ALL \
     libXMFaceFocus-vendor \
     libXMFaceFocus1206 \
+    lib_android_keymaster_keymint_utils-v36 \
     lib_iir \
     libaaa_aaautil \
     libaaa_afassist_V2 \
@@ -1337,7 +1339,7 @@ PRODUCT_PACKAGES += \
     libfgauge_gm30 \
     libfile_op \
     libforkexecwrap \
-    libformatter \
+    libformatter-v33 \
     libfsmsmartpaparse \
     libfvaudio \
     libged \
@@ -1366,6 +1368,9 @@ PRODUCT_PACKAGES += \
     libjpeg-alpha_vendor \
     libjpegdecoder_klee \
     libjpegencoder_klee \
+    libkeymint-v36 \
+    libkeymint_remote_prov_support-v36 \
+    libkeymint_support-v36 \
     libladder \
     libmbrainSDKv \
     libmcve \
@@ -1393,6 +1398,7 @@ PRODUCT_PACKAGES += \
     libmispowerop \
     libmmprofile \
     libmnetlink_v104 \
+    libmnl-v33 \
     libmsbc_mtk \
     libmtk-fusion-ril-prop-vsim \
     libmtk-ril \
@@ -1793,7 +1799,6 @@ PRODUCT_PACKAGES += \
     libmmagent \
     libmml \
     libmmlpqImpl \
-    libmnl \
     libmtk_mali_utils \
     libmtkcam.atmseventmgr \
     libmtkcam.debugwrapper \
@@ -2712,7 +2717,6 @@ PRODUCT_PACKAGES += \
     vendor_lib64_libmmagent_so \
     vendor_lib64_libmml_so \
     vendor_lib64_libmmlpqImpl_so \
-    vendor_lib64_libmnl_so \
     vendor_lib64_libmtk_mali_utils_so \
     vendor_lib64_libmtkcam_atmseventmgr_so \
     vendor_lib64_libmtkcam_debugwrapper_so \
